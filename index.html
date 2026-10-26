@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Castelo do Bode Angler</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Field guide to fishing Castelo do Bode: spots, lures by time and weather, planner and almanac.">
+<meta name="theme-color" content="#1E4C77">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CdB Angler">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<style>
+ .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container, .leaflet-pane > svg, .leaflet-pane > canvas, .leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer { position: absolute; left: 0; top: 0; } .leaflet-container { overflow: hidden; } .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow { -webkit-user-select: none; -moz-user-select: none; user-select: none; -webkit-user-drag: none; } .leaflet-tile::selection { background: transparent; } .leaflet-safari .leaflet-tile { image-rendering: -webkit-optimize-contrast; } .leaflet-safari .leaflet-tile-container { width: 1600px; height: 1600px; -webkit-transform-origin: 0 0; } .leaflet-marker-icon, .leaflet-marker-shadow { display: block; } .leaflet-container .leaflet-overlay-pane svg { max-width: none !important; max-height: none !important; } .leaflet-container .leaflet-marker-pane img, .leaflet-container .leaflet-shadow-pane img, .leaflet-container .leaflet-tile-pane img, .leaflet-container img.leaflet-image-layer, .leaflet-container .leaflet-tile { max-width: none !important; max-height: none !important; width: auto; padding: 0; } .leaflet-container img.leaflet-tile { mix-blend-mode: plus-lighter; } .leaflet-container.leaflet-touch-zoom { -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; } .leaflet-container.leaflet-touch-drag { -ms-touch-action: pinch-zoom; touch-action: none; touch-action: pinch-zoom; } .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom { -ms-touch-action: none; touch-action: none; } .leaflet-container { -webkit-tap-highlight-color: transparent; } .leaflet-container a { -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4); } .leaflet-tile { filter: inherit; visibility: hidden; } .leaflet-tile-loaded { visibility: inherit; } .leaflet-zoom-box { width: 0; height: 0; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 800; } .leaflet-overlay-pane svg { -moz-user-select: none; } .leaflet-pane { z-index: 400; } .leaflet-tile-pane { z-index: 200; } .leaflet-overlay-pane { z-index: 400; } .leaflet-shadow-pane { z-index: 500; } .leaflet-marker-pane { z-index: 600; } .leaflet-tooltip-pane { z-index: 650; } .leaflet-popup-pane { z-index: 700; } .leaflet-map-pane canvas { z-index: 100; } .leaflet-map-pane svg { z-index: 200; } .leaflet-vml-shape { width: 1px; height: 1px; } .lvml { behavior: url(#default#VML); display: inline-block; position: absolute; } .leaflet-control { position: relative; z-index: 800; pointer-events: visiblePainted; pointer-events: auto; } .leaflet-top, .leaflet-bottom { position: absolute; z-index: 1000; pointer-events: none; } .leaflet-top { top: 0; } .leaflet-right { right: 0; } .leaflet-bottom { bottom: 0; } .leaflet-left { left: 0; } .leaflet-control { float: left; clear: both; } .leaflet-right .leaflet-control { float: right; } .leaflet-top .leaflet-control { margin-top: 10px; } .leaflet-bottom .leaflet-control { margin-bottom: 10px; } .leaflet-left .leaflet-control { margin-left: 10px; } .leaflet-right .leaflet-control { margin-right: 10px; } .leaflet-fade-anim .leaflet-popup { opacity: 0; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; transition: opacity 0.2s linear; } .leaflet-fade-anim .leaflet-map-pane .leaflet-popup { opacity: 1; } .leaflet-zoom-animated { -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; } svg.leaflet-zoom-animated { will-change: transform; } .leaflet-zoom-anim .leaflet-zoom-animated { -webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1); -moz-transition: -moz-transform 0.25s cubic-bezier(0,0,0.25,1); transition: transform 0.25s cubic-bezier(0,0,0.25,1); } .leaflet-zoom-anim .leaflet-tile, .leaflet-pan-anim .leaflet-tile { -webkit-transition: none; -moz-transition: none; transition: none; } .leaflet-zoom-anim .leaflet-zoom-hide { visibility: hidden; } .leaflet-interactive { cursor: pointer; } .leaflet-grab { cursor: -webkit-grab; cursor: -moz-grab; cursor: grab; } .leaflet-crosshair, .leaflet-crosshair .leaflet-interactive { cursor: crosshair; } .leaflet-popup-pane, .leaflet-control { cursor: auto; } .leaflet-dragging .leaflet-grab, .leaflet-dragging .leaflet-grab .leaflet-interactive, .leaflet-dragging .leaflet-marker-draggable { cursor: move; cursor: -webkit-grabbing; cursor: -moz-grabbing; cursor: grabbing; } .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-image-layer, .leaflet-pane > svg path, .leaflet-tile-container { pointer-events: none; } .leaflet-marker-icon.leaflet-interactive, .leaflet-image-layer.leaflet-interactive, .leaflet-pane > svg path.leaflet-interactive, svg.leaflet-image-layer.leaflet-interactive path { pointer-events: visiblePainted; pointer-events: auto; } .leaflet-container { background: #ddd; outline-offset: 1px; } .leaflet-container a { color: #0078A8; } .leaflet-zoom-box { border: 2px dotted #38f; background: rgba(255,255,255,0.5); } .leaflet-container { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 12px; font-size: 0.75rem; line-height: 1.5; } .leaflet-bar { box-shadow: 0 1px 5px rgba(0,0,0,0.65); border-radius: 4px; } .leaflet-bar a { background-color: #fff; border-bottom: 1px solid #ccc; width: 26px; height: 26px; line-height: 26px; display: block; text-align: center; text-decoration: none; color: black; } .leaflet-bar a, .leaflet-control-layers-toggle { background-position: 50% 50%; background-repeat: no-repeat; display: block; } .leaflet-bar a:hover, .leaflet-bar a:focus { background-color: #f4f4f4; } .leaflet-bar a:first-child { border-top-left-radius: 4px; border-top-right-radius: 4px; } .leaflet-bar a:last-child { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: none; } .leaflet-bar a.leaflet-disabled { cursor: default; background-color: #f4f4f4; color: #bbb; } .leaflet-touch .leaflet-bar a { width: 30px; height: 30px; line-height: 30px; } .leaflet-touch .leaflet-bar a:first-child { border-top-left-radius: 2px; border-top-right-radius: 2px; } .leaflet-touch .leaflet-bar a:last-child { border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; } .leaflet-control-zoom-in, .leaflet-control-zoom-out { font: bold 18px 'Lucida Console', Monaco, monospace; text-indent: 1px; } .leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out { font-size: 22px; } .leaflet-control-layers { box-shadow: 0 1px 5px rgba(0,0,0,0.4); background: #fff; border-radius: 5px; } .leaflet-control-layers-toggle { background-image: none; width: 36px; height: 36px; } .leaflet-retina .leaflet-control-layers-toggle { background-image: none; background-size: 26px 26px; } .leaflet-touch .leaflet-control-layers-toggle { width: 44px; height: 44px; } .leaflet-control-layers .leaflet-control-layers-list, .leaflet-control-layers-expanded .leaflet-control-layers-toggle { display: none; } .leaflet-control-layers-expanded .leaflet-control-layers-list { display: block; position: relative; } .leaflet-control-layers-expanded { padding: 6px 10px 6px 6px; color: #333; background: #fff; } .leaflet-control-layers-scrollbar { overflow-y: scroll; overflow-x: hidden; padding-right: 5px; } .leaflet-control-layers-selector { margin-top: 2px; position: relative; top: 1px; } .leaflet-control-layers label { display: block; font-size: 13px; font-size: 1.08333em; } .leaflet-control-layers-separator { height: 0; border-top: 1px solid #ddd; margin: 5px -10px 5px -6px; } .leaflet-default-icon-path { background-image: none; } .leaflet-container .leaflet-control-attribution { background: #fff; background: rgba(255, 255, 255, 0.8); margin: 0; } .leaflet-control-attribution, .leaflet-control-scale-line { padding: 0 5px; color: #333; line-height: 1.4; } .leaflet-control-attribution a { text-decoration: none; } .leaflet-control-attribution a:hover, .leaflet-control-attribution a:focus { text-decoration: underline; } .leaflet-attribution-flag { display: inline !important; vertical-align: baseline !important; width: 1em; height: 0.6669em; } .leaflet-left .leaflet-control-scale { margin-left: 5px; } .leaflet-bottom .leaflet-control-scale { margin-bottom: 5px; } .leaflet-control-scale-line { border: 2px solid #777; border-top: none; line-height: 1.1; padding: 2px 5px 1px; white-space: nowrap; -moz-box-sizing: border-box; box-sizing: border-box; background: rgba(255, 255, 255, 0.8); text-shadow: 1px 1px #fff; } .leaflet-control-scale-line:not(:first-child) { border-top: 2px solid #777; border-bottom: none; margin-top: -2px; } .leaflet-control-scale-line:not(:first-child):not(:last-child) { border-bottom: 2px solid #777; } .leaflet-touch .leaflet-control-attribution, .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar { box-shadow: none; } .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar { border: 2px solid rgba(0,0,0,0.2); background-clip: padding-box; } .leaflet-popup { position: absolute; text-align: center; margin-bottom: 20px; } .leaflet-popup-content-wrapper { padding: 1px; text-align: left; border-radius: 12px; } .leaflet-popup-content { margin: 13px 24px 13px 20px; line-height: 1.3; font-size: 13px; font-size: 1.08333em; min-height: 1px; } .leaflet-popup-content p { margin: 17px 0; margin: 1.3em 0; } .leaflet-popup-tip-container { width: 40px; height: 20px; position: absolute; left: 50%; margin-top: -1px; margin-left: -20px; overflow: hidden; pointer-events: none; } .leaflet-popup-tip { width: 17px; height: 17px; padding: 1px; margin: -10px auto 0; pointer-events: auto; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); } .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: white; color: #333; box-shadow: 0 3px 14px rgba(0,0,0,0.4); } .leaflet-container a.leaflet-popup-close-button { position: absolute; top: 0; right: 0; border: none; text-align: center; width: 24px; height: 24px; font: 16px/24px Tahoma, Verdana, sans-serif; color: #757575; text-decoration: none; background: transparent; } .leaflet-container a.leaflet-popup-close-button:hover, .leaflet-container a.leaflet-popup-close-button:focus { color: #585858; } .leaflet-popup-scrolled { overflow: auto; } .leaflet-oldie .leaflet-popup-content-wrapper { -ms-zoom: 1; } .leaflet-oldie .leaflet-popup-tip { width: 24px; margin: 0 auto; -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)"; filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678); } .leaflet-oldie .leaflet-control-zoom, .leaflet-oldie .leaflet-control-layers, .leaflet-oldie .leaflet-popup-content-wrapper, .leaflet-oldie .leaflet-popup-tip { border: 1px solid #999; } .leaflet-div-icon { background: #fff; border: 1px solid #666; } .leaflet-tooltip { position: absolute; padding: 6px; background-color: #fff; border: 1px solid #fff; border-radius: 3px; color: #222; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; box-shadow: 0 1px 3px rgba(0,0,0,0.4); } .leaflet-tooltip.leaflet-interactive { cursor: pointer; pointer-events: auto; } .leaflet-tooltip-top:before, .leaflet-tooltip-bottom:before, .leaflet-tooltip-left:before, .leaflet-tooltip-right:before { position: absolute; pointer-events: none; border: 6px solid transparent; background: transparent; content: ""; } .leaflet-tooltip-bottom { margin-top: 6px; } .leaflet-tooltip-top { margin-top: -6px; } .leaflet-tooltip-bottom:before, .leaflet-tooltip-top:before { left: 50%; margin-left: -6px; } .leaflet-tooltip-top:before { bottom: 0; margin-bottom: -12px; border-top-color: #fff; } .leaflet-tooltip-bottom:before { top: 0; margin-top: -12px; margin-left: -6px; border-bottom-color: #fff; } .leaflet-tooltip-left { margin-left: -6px; } .leaflet-tooltip-right { margin-left: 6px; } .leaflet-tooltip-left:before, .leaflet-tooltip-right:before { top: 50%; margin-top: -6px; } .leaflet-tooltip-left:before { right: 0; margin-right: -12px; border-left-color: #fff; } .leaflet-tooltip-right:before { left: 0; margin-left: -12px; border-right-color: #fff; } @media print { .leaflet-control { -webkit-print-color-adjust: exact; print-color-adjust: exact; } } 
+/* Layout: phone first. A slim masthead, one working surface (map, planner or almanac),
+   and a bottom tab bar. On the map, a conditions pill floats on top and the spot sheet
+   slides up from the bottom. On wide screens the sheet becomes a right-hand panel. */
+:root{
+  --paper:#F1E5BC; --paper-2:#F8F0D4; --paper-3:#E8D9A6;
+  --ink:#1D2620; --ink-2:#5B573F; --rule:#CBB880;
+  --lake:#1E4C77; --leaf:#2E6740; --fin:#B0432D; --gold:#C29224;
+  --r0:#8E8870; --r1:#B0432D; --r2:#C8752A; --r3:#C79F24; --r4:#6B9539; --r5:#2E6740;
+  --map-ink:#F8F0D4;
+  --f-display:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;
+  --f-head:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --f-old:"IM Fell English","Libre Caslon Text",Georgia,serif;
+  --f-ui:"Libre Franklin",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --nav-h:58px;
+  color-scheme:light;
+}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.45;overflow:hidden;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:4000;background:var(--lake)}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
+a{color:var(--lake)}
+.app{height:100%;display:grid;grid-template-rows:auto 1fr auto;min-height:0}
+
+/* Masthead */
+.mast{background:var(--lake);color:var(--map-ink);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:9px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;flex-direction:column;line-height:1;min-width:0}
+.brand small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;margin-bottom:3px}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:21px;white-space:nowrap}
+.tabs{display:flex}
+.tabs a{text-decoration:none;display:flex;align-items:center;gap:6px;font-weight:600;font-size:13px}
+.tabs svg{width:20px;height:20px}
+
+/* Bottom nav (phone) */
+.bottomnav{background:var(--paper-2);border-top:1px solid var(--rule);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+.bottomnav .tabs{height:var(--nav-h)}
+.bottomnav .tabs a{flex:1;flex-direction:column;justify-content:center;gap:3px;color:var(--ink-2);font-size:11.5px}
+.bottomnav .tabs a[aria-current="page"]{color:var(--lake)}
+.bottomnav .tabs a[aria-current="page"] svg{stroke-width:2.4}
+.mast .tabs{display:none}
+
+main{min-height:0;position:relative}
+.view{position:absolute;inset:0}
+.view[hidden]{display:none!important}
+
+/* Conditions pill */
+.condpill{position:absolute;z-index:1200;top:10px;left:50%;transform:translateX(-50%);max-width:calc(100% - 24px);display:flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--ink-2);border-radius:999px;padding:6px 14px 6px 8px;box-shadow:0 4px 16px rgba(0,0,0,.35);font-weight:600;font-size:13.5px;white-space:nowrap}
+.condpill svg{width:22px;height:22px;flex:none}
+.condpill .t{overflow:hidden;text-overflow:ellipsis;min-width:0}
+.condpill .dot{width:8px;height:8px;border-radius:50%;background:var(--r0);flex:none}
+.condpill .dot.on{background:var(--r5)}
+.condpill .chev{opacity:.6;font-size:12px}
+.flag{position:absolute;z-index:1150;top:56px;left:50%;transform:translateX(-50%);background:var(--fin);color:#fff;font-weight:600;font-size:12.5px;padding:5px 12px;border-radius:999px;white-space:nowrap;max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+
+/* Map */
+#map{position:absolute;inset:0;background:#1b2618}
+.leaflet-container{font-family:var(--f-ui)}
+.leaflet-control-attribution{font-size:9.5px;background:rgba(248,240,212,.8)!important;max-width:60vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.leaflet-top{top:56px}
+.pinw{position:relative}
+.pin{position:absolute;left:-20px;top:-20px;width:40px;height:40px;border-radius:50%;border:3px solid var(--paper-2);display:grid;place-items:center;color:#fff;font:700 16px/1 var(--f-ui);box-shadow:0 2px 8px rgba(0,0,0,.55);padding:0;transition:transform .15s}
+.pin.sel{transform:scale(1.18);outline:3px solid var(--gold);outline-offset:2px}
+.pin.r0{background:var(--r0)}.pin.r1{background:var(--r1)}.pin.r2{background:var(--r2)}.pin.r3{background:var(--r3)}.pin.r4{background:var(--r4)}.pin.r5{background:var(--r5)}
+.plabel{position:absolute;left:25px;top:-14px;white-space:nowrap;font:600 13px/1.2 var(--f-ui);color:var(--map-ink);text-shadow:0 1px 3px #000,0 0 6px #000;pointer-events:none}
+.plabel i{display:block;font-style:normal;font-weight:500;font-size:11.5px;opacity:.92}
+.shop{position:absolute;left:-9px;top:-9px;width:18px;height:18px;border-radius:4px;background:var(--paper-2);border:2px solid var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.5)}
+
+/* Sheet */
+.sheet{position:absolute;left:0;right:0;bottom:0;z-index:1300;background:var(--paper);border-top:1px solid var(--ink-2);border-radius:18px 18px 0 0;box-shadow:0 -8px 28px rgba(0,0,0,.35);display:flex;flex-direction:column;height:150px;transition:height .25s ease;touch-action:none}
+.sheet.drag{transition:none}
+.sheet-head{padding:6px 18px 10px;cursor:grab;touch-action:none;user-select:none}
+.grab{display:block;width:44px;height:5px;border-radius:9px;background:var(--rule);margin:2px auto 10px}
+.sheet-body{overflow-y:auto;overscroll-behavior:contain;padding:0 18px 28px;touch-action:pan-y;flex:1;min-height:0}
+.eyebrow{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.stitle{font-family:var(--f-head);font-size:24px;line-height:1.1;margin:2px 0 0;text-wrap:balance}
+.sub{font-size:14px;color:var(--ink-2);margin-top:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hooks{display:inline-flex;gap:2px;align-items:center;vertical-align:middle}
+.hooks svg{width:22px;height:12px}
+.closebtn{float:right;border:1px solid var(--rule);background:var(--paper-2);border-radius:999px;width:34px;height:34px;font-size:18px;line-height:1;margin:-2px -4px 0 8px}
+.stack{display:flex;flex-direction:column;gap:14px}
+.spotrow{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;border:1px solid var(--rule);background:var(--paper-2);border-radius:14px;padding:10px 12px;text-align:left;width:100%}
+.spotrow .n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700}
+.spotrow b{display:block;font-size:15px}
+.spotrow small{color:var(--ink-2);font-size:12.5px}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:12px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid var(--lake);background:var(--lake);color:var(--map-ink);flex:1;min-height:46px}
+.btn.ghost{background:transparent;color:var(--lake)}
+.about{font-size:14.5px;margin:0}
+.reasons{display:flex;flex-wrap:wrap;gap:6px}
+.rchip{font-size:12.5px;border-radius:999px;padding:3px 10px;background:#D7E5C4;color:#244F31}
+.rchip.neg{background:#F1D3C6;color:#86301F}
+
+/* Hour strip */
+.strip{background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;padding:10px 12px}
+.strip-grid{display:grid;grid-template-columns:42px repeat(var(--n),minmax(0,1fr));gap:3px;align-items:center;margin-top:8px}
+.strip-grid .lab{font-size:11px;font-weight:600;color:var(--ink-2)}
+.strip-grid button{height:22px;border:0;border-radius:4px;padding:0}
+.strip-grid button.cur{outline:2px solid var(--ink);outline-offset:1px}
+.strip-hours{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-2);margin-left:45px;margin-top:4px;font-variant-numeric:tabular-nums}
+
+/* Species block */
+.sp{border-top:2px solid var(--ink);padding-top:12px}
+.sp-head{display:grid;grid-template-columns:86px 1fr;gap:12px;align-items:center}
+.sp-head img{width:86px;height:44px;object-fit:contain}
+.sp-head h3{margin:0;font-family:var(--f-head);font-size:20px;line-height:1.1}
+.sp-head .sub{margin-top:2px;font-size:13px}
+.closednote{background:#F1D3C6;color:#86301F;border-radius:10px;padding:10px 12px;font-weight:600;font-size:14px;margin-top:10px}
+.lure{margin-top:10px;background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.lure-top{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:12px;align-items:center}
+.lure-top img{width:92px;height:76px;object-fit:cover;border-radius:9px;border:1px solid var(--rule);background:var(--paper-2)}
+.rank{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.lure h4{margin:1px 0 0;font-family:var(--f-head);font-size:18px;line-height:1.15}
+.bar{height:7px;border-radius:99px;background:var(--paper-3);overflow:hidden;margin:7px 0 3px}
+.bar i{display:block;height:100%;border-radius:99px}
+.retrieve{width:100%;max-width:120px;height:24px;display:block}
+.lure-body{border-top:1px dashed var(--rule);padding:10px 12px 12px;display:flex;flex-direction:column;gap:8px}
+.kv{display:grid;grid-template-columns:66px 1fr;gap:4px 10px;font-size:14px;margin:0}
+.kv dt{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.kv dd{margin:0}
+.alt{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;padding:8px 10px;border:1px solid var(--rule);border-radius:12px;background:var(--paper-2);margin-top:8px;width:100%;text-align:left}
+.alt img{width:52px;height:42px;object-fit:cover;border-radius:7px}
+.alt b{display:block;font-size:14.5px}
+.alt small{color:var(--ink-2);font-size:12px}
+.alt .sc{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink-2)}
+.alt[aria-expanded="true"]{border-color:var(--ink-2)}
+.altdetail{margin-top:6px}
+
+/* Conditions sheet (modal) */
+.scrim{position:fixed;inset:0;z-index:3000;background:rgba(20,26,22,.45);display:flex;align-items:flex-end;justify-content:center}
+.scrim[hidden]{display:none}
+.csheet{background:var(--paper);width:100%;max-width:560px;border-radius:20px 20px 0 0;max-height:88%;overflow-y:auto;padding:8px 18px calc(18px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 30px rgba(0,0,0,.35)}
+.csheet h2{font-family:var(--f-head);font-weight:400;font-size:22px;margin:4px 0 2px}
+.cgroup{margin-top:16px}
+.cgroup .eyebrow{margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+.seg{display:flex;border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:var(--paper-2)}
+.seg button{flex:1;border:0;background:transparent;padding:10px 6px;font-weight:600;font-size:13.5px;display:flex;flex-direction:column;align-items:center;gap:3px;min-height:48px}
+.seg button svg{width:24px;height:24px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper-2)}
+.seg button[aria-pressed="true"] svg{filter:brightness(1.3)}
+.timebig{font-family:var(--f-head);font-size:30px;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:10px}
+.timebig small{font-family:var(--f-ui);font-size:13px;color:var(--ink-2);font-weight:600}
+input[type=range]{width:100%;accent-color:var(--lake);height:32px}
+.quick{display:flex;gap:6px;margin-top:4px}
+.quick button{flex:1;border:1px solid var(--rule);background:var(--paper-2);border-radius:10px;padding:8px 4px;font-size:12.5px;font-weight:600}
+.stepper{display:flex;align-items:center;gap:12px}
+.stepper button{width:46px;height:46px;border-radius:12px;border:1px solid var(--rule);background:var(--paper-2);font-size:22px;font-weight:700}
+.stepper output{font-weight:700;font-size:22px;font-variant-numeric:tabular-nums;min-width:80px;text-align:center}
+.linkbtn{border:0;background:none;color:var(--lake);font-weight:600;font-size:12.5px;padding:0;text-decoration:underline}
+.facts{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
+.facts span{display:inline-flex;gap:6px;align-items:center}
+.facts svg{width:22px;height:22px}
+.livebox{border:1px dashed var(--lake);border-radius:12px;padding:10px 12px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.livebox.on{border-style:solid;background:#E3EAF0}
+.livebox p{margin:0;font-size:13px}
+.livebox .note{color:var(--ink-2)}
+.livebox .err{color:var(--fin)}
+
+/* Pages */
+.scroll{overflow-y:auto;height:100%;-webkit-overflow-scrolling:touch}
+.page{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 40px}
+.page h1{font-family:var(--f-display);font-weight:400;font-size:30px;line-height:1.05;margin:0;text-wrap:balance}
+.lede{font-size:15px;max-width:62ch;margin:8px 0 0;color:var(--ink-2)}
+.condline{display:flex;margin:12px 0 0}
+.condline .condpill{position:static;transform:none;max-width:100%;box-shadow:none}
+
+/* Planner */
+.windows{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin-top:16px}
+.win{background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;padding:12px;display:flex;gap:12px;align-items:center;text-align:left;width:100%}
+.win img{width:68px;height:56px;object-fit:cover;border-radius:8px;border:1px solid var(--rule);flex:none}
+.win b{font-family:var(--f-head);font-size:17px;display:block}
+.win .t{font-variant-numeric:tabular-nums;font-weight:700;color:var(--lake)}
+.win small{color:var(--ink-2)}
+.heat{margin-top:16px;border:1px solid var(--rule);border-radius:14px;background:var(--paper-2);padding:8px}
+.hgrid{display:grid;grid-template-columns:48px repeat(6,minmax(0,1fr));gap:3px}
+.hgrid .h{font-size:11px;font-weight:600;color:var(--ink-2);text-align:center;line-height:1.1;align-self:end;padding-bottom:3px;overflow:hidden}
+.hgrid .tm{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink-2);display:flex;align-items:center;gap:2px}
+.hgrid button{border:0;border-radius:6px;min-height:40px;color:#fff;font-weight:700;font-size:13px;line-height:1.05;padding:2px}
+.hgrid button small{display:block;font-weight:500;font-size:9.5px;opacity:.95}
+.hgrid button.cur{outline:3px solid var(--ink);outline-offset:-2px}
+.sunmark{color:var(--gold);font-weight:700}
+.keyrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px;font-size:12px;color:var(--ink-2)}
+.keyrow span{display:inline-flex;gap:5px;align-items:center}
+.keyrow i{width:14px;height:14px;border-radius:4px;display:inline-block}
+
+/* Almanac */
+.alm{background:var(--paper)}
+.alm .page{max-width:980px}
+/* Almanac */
+.alm{background:var(--paper)}
+.alm .page{max-width:980px}
+.cover{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center;border-bottom:2px solid var(--ink);padding-bottom:22px}
+.cover h1{font-size:44px;color:var(--lake)}
+.cover h1 em{display:block;font-family:var(--f-head);font-style:italic;font-size:22px;color:var(--ink);margin-top:6px}
+.cover img{width:100%;border:1px solid var(--rule);border-radius:4px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:14px;font-size:13px}
+.toc a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--rule)}
+.plates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.plate{background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:16px 18px 14px;display:flex;flex-direction:column;gap:8px;position:relative}
+.plate .no{position:absolute;top:10px;right:14px;font-family:var(--f-head);font-style:italic;color:var(--ink-2);font-size:13px}
+.plate figure{margin:0;height:150px;display:grid;place-items:center}
+.plate figure img{max-height:150px;max-width:100%;object-fit:contain}
+.plate figure img.mult{mix-blend-mode:multiply;max-height:150px}
+.plate h3{margin:0;font-family:var(--f-head);font-size:20px;font-weight:700;line-height:1.1}
+.plate .names{font-family:var(--f-head);font-style:italic;color:var(--ink-2);font-size:14px}
+.plate p{margin:0;font-size:13.5px}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 9px;border-radius:999px;color:#fff;align-self:flex-start}
+.pill.open{background:var(--leaf)}.pill.closed{background:var(--fin)}.pill.warn{background:var(--gold)}.pill.grey{background:var(--r0)}
+.credit{font-size:11px;color:var(--ink-2)}
+.credit a{color:var(--ink-2)}
+.chapter{margin-top:42px;border-top:2px solid var(--ink);padding-top:16px}
+.chapter .num{font-family:var(--f-head);font-style:italic;color:var(--ink-2);font-size:14px}
+.chapter h2{font-family:var(--f-display);font-weight:400;font-size:34px;margin:2px 0 14px;line-height:1.05}
+.chap-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.chap-grid figure{margin:0}
+.chap-grid figure img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block}
+.chap-grid figcaption{margin-top:6px}
+blockquote.old{margin:0 0 14px;font-family:var(--f-old);font-size:19px;line-height:1.4;color:#2C2A1E;padding-left:16px;border-left:3px solid var(--rule)}
+blockquote.old footer{font-family:var(--f-ui);font-size:11.5px;color:var(--ink-2);margin-top:4px;letter-spacing:.02em}
+.dropcap::first-letter{float:left;font-family:var(--f-display);font-size:62px;line-height:.85;padding:4px 8px 0 0;color:var(--fin)}
+.modern{background:#E4ECE1;border:1px solid #B9CDB2;border-radius:10px;padding:14px 16px;margin-top:6px}
+.modern h4{margin:0 0 6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+.modern ul{margin:0;padding-left:18px;font-size:14px;display:flex;flex-direction:column;gap:4px}
+.matrixwrap{overflow-x:auto;margin-top:14px;border:1px solid var(--rule);border-radius:10px;background:var(--paper-2)}
+table.matrix{border-collapse:collapse;font-size:12.5px;min-width:100%}
+table.matrix th,table.matrix td{padding:6px 8px;border-bottom:1px solid var(--paper-3);text-align:center;white-space:nowrap}
+table.matrix th:first-child,table.matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--paper-2);font-weight:600}
+table.matrix thead th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);vertical-align:bottom}
+.m{display:inline-block;min-width:22px;border-radius:5px;font-weight:700}
+.m.p3{background:var(--r5);color:#fff}.m.p2{background:var(--r4);color:#fff}.m.p1{background:#CFE0B8;color:var(--leaf)}
+.m.n1{background:#F1D3C6;color:var(--fin)}.m.n2{background:var(--r2);color:#fff}.m.n3{background:var(--r1);color:#fff}
+.lures{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.lcard{background:var(--paper-2);border:1px solid var(--rule);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.lcard img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--paper-2);border-bottom:1px solid var(--rule)}
+.lcard div{padding:10px 12px;display:flex;flex-direction:column;gap:6px}
+.lcard h3{margin:0;font-family:var(--f-head);font-size:17px}
+.lcard p{margin:0;font-size:13px}
+table.rules{width:100%;border-collapse:collapse;font-size:13.5px}
+table.rules th,table.rules td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+table.rules th{width:34%;font-weight:600}
+.sources{font-size:13px;columns:2;column-gap:28px}
+.sources li{break-inside:avoid;margin-bottom:4px}
+
+
+.qsrc{font-size:12px;color:var(--ink-2);margin:-4px 0 16px}
+@media (max-width:899px){
+  .chap-grid,.cover{grid-template-columns:1fr}
+  .plates{grid-template-columns:1fr}
+  .sources{columns:1}
+  .cover h1{font-size:34px}
+}
+
+/* Wide screens */
+@media (min-width:900px){
+  .app{grid-template-rows:auto 1fr}
+  .bottomnav{display:none}
+  .mast .tabs{display:flex;margin-left:auto;gap:4px;background:rgba(0,0,0,.18);padding:3px;border-radius:999px}
+  .mast .tabs a{color:var(--map-ink);padding:6px 14px;border-radius:999px}
+  .mast .tabs a[aria-current="page"]{background:var(--paper);color:var(--lake)}
+  .mast .tabs svg{width:16px;height:16px}
+  #map{right:440px}
+  .condpill,.flag{left:calc((100% - 440px)/2)}
+  .sheet{left:auto;top:0;width:440px;height:auto!important;border-radius:0;border-top:0;border-left:1px solid var(--rule);box-shadow:none;transition:none}
+  .sheet-head{cursor:default}
+  .grab{display:none}
+  .scrim{align-items:center}
+  .csheet{border-radius:20px;max-height:90%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="app">
+  <header class="mast">
+    <div class="brand"><small>Albufeira · Rio Zêzere</small><b>Castelo do Bode Angler</b></div>
+    <nav class="tabs" aria-label="Views" id="toptabs"></nav>
+  </header>
+
+  <main>
+    <section class="view" id="mapview" data-v="map">
+      <div id="map" aria-label="Satellite map of the reservoir with fishing spots"></div>
+      <button class="condpill" id="pill-map" aria-haspopup="dialog"></button>
+      <div class="flag" id="flag" hidden></div>
+      <aside class="sheet" id="sheet" aria-live="polite">
+        <div class="sheet-head" id="sheethead"><span class="grab" aria-hidden="true"></span><div id="sheettop"></div></div>
+        <div class="sheet-body" id="sheetbody"></div>
+      </aside>
+    </section>
+
+    <section class="view scroll" id="plannerview" data-v="planner" hidden>
+      <div class="page" id="planner"></div>
+    </section>
+
+    <section class="view scroll alm" id="almanacview" data-v="almanac" hidden>
+      <div class="page" id="almanac"></div>
+    </section>
+  </main>
+
+  <nav class="bottomnav" aria-label="Views"><div class="tabs" id="bottomtabs"></div></nav>
+</div>
+
+<div class="scrim" id="scrim" hidden><div class="csheet" role="dialog" aria-modal="true" aria-labelledby="ctitle" id="csheet"></div></div>
+
+<script src="leaflet.js"></script>
+<script src="engine.js"></script>
+<script>
+(() => {
+'use strict';
+const E = window.CDB;
+const TZ = E.LAKE.tz;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('cdb.' + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('cdb.' + k, JSON.stringify(v)); } catch {} }
+};
+
+// ---------- Time zone helpers ----------
+const fmtParts = new Intl.DateTimeFormat('en-GB', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false });
+function parts(d) { const o = {}; for (const p of fmtParts.formatToParts(d)) o[p.type] = p.value; if (o.hour === '24') o.hour = '00'; return o; }
+function ymdOf(d) { const p = parts(d); return `${p.year}-${p.month}-${p.day}`; }
+function minutesOf(d) { const p = parts(d); return +p.hour * 60 + +p.minute; }
+function offsetMin(t) { const p = parts(new Date(t)); return (Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute) - Math.floor(t / 60000) * 60000) / 60000; }
+function localDate(ymd, min) { const [y, m, d] = ymd.split('-').map(Number); const g = Date.UTC(y, m - 1, d, 0, min); return new Date(g - offsetMin(g) * 60000); }
+function hhmm(min) { min = Math.round(min); return String(Math.floor(min / 60)).padStart(2, '0') + ':' + String(min % 60).padStart(2, '0'); }
+function fmtTime(d) { return hhmm(minutesOf(d)); }
+function addDays(ymd, n) { const [y, m, d] = ymd.split('-').map(Number); const t = new Date(Date.UTC(y, m - 1, d + n, 12)); return t.toISOString().slice(0, 10); }
+function dayName(ymd, i) { if (i === 0) return 'Today'; if (i === 1) return 'Tomorrow'; const [y, m, d] = ymd.split('-').map(Number); return new Date(Date.UTC(y, m - 1, d, 12)).toLocaleDateString('en-GB', { weekday: 'short', timeZone: 'UTC' }); }
+
+// ---------- Icons ----------
+const I = {
+  sun: '<svg viewBox="0 0 24 24" fill="none" stroke="#C29224" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="#E9C25A"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>',
+  part: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="3.6" fill="#E9C25A" stroke="#C29224"/><path d="M9 2.5v1.6M2.5 9h1.6M4.4 4.4l1.1 1.1M13.6 4.4l-1.1 1.1" stroke="#C29224"/><path d="M7 19h10.5a3.5 3.5 0 0 0 .3-7 5 5 0 0 0-9.6 1.2A3 3 0 0 0 7 19z" fill="#F8F0D4" stroke="#5B573F"/></svg>',
+  cloud: '<svg viewBox="0 0 24 24" fill="#E3DCC4" stroke="#5B573F" stroke-width="1.8"><path d="M6.5 19h11a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6 1.3A3.4 3.4 0 0 0 6.5 19z"/></svg>',
+  rain: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M6.5 15h11a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6 1.3A3.4 3.4 0 0 0 6.5 15z" fill="#E3DCC4" stroke="#5B573F"/><path d="M8 18l-1 3M12 18l-1 3M16 18l-1 3" stroke="#1E4C77"/></svg>',
+  calm: '<svg viewBox="0 0 24 24" fill="none" stroke="#1E4C77" stroke-width="1.8" stroke-linecap="round"><path d="M3 12h18" opacity=".5"/><path d="M5 16c2-1 4-1 6 0s4 1 6 0" opacity=".5"/></svg>',
+  breeze: '<svg viewBox="0 0 24 24" fill="none" stroke="#1E4C77" stroke-width="1.8" stroke-linecap="round"><path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 15h7"/></svg>',
+  windy: '<svg viewBox="0 0 24 24" fill="none" stroke="#1E4C77" stroke-width="2" stroke-linecap="round"><path d="M3 8h12a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg>',
+  falling: '<svg viewBox="0 0 24 24" fill="none" stroke="#2E6740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" stroke="#5B573F" stroke-width="1.4"/><path d="M12 7v10M8 13l4 4 4-4"/></svg>',
+  steady: '<svg viewBox="0 0 24 24" fill="none" stroke="#5B573F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" stroke-width="1.4"/><path d="M7 12h10M13 8l4 4-4 4"/></svg>',
+  rising: '<svg viewBox="0 0 24 24" fill="none" stroke="#B0432D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" stroke="#5B573F" stroke-width="1.4"/><path d="M12 17V7M8 11l4-4 4 4"/></svg>',
+  water: '<svg viewBox="0 0 24 24" fill="none" stroke="#1E4C77" stroke-width="1.8" stroke-linecap="round"><path d="M10 4v10.5a3.5 3.5 0 1 0 4 0V4a2 2 0 0 0-4 0z" fill="#F8F0D4"/><path d="M12 9v7" stroke="#B0432D" stroke-width="2.4"/><circle cx="12" cy="17.5" r="2" fill="#B0432D" stroke="none"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="#5B573F" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  season: '<svg viewBox="0 0 24 24" fill="none" stroke="#2E6740" stroke-width="1.8" stroke-linecap="round"><path d="M12 21c-5-3-7-7-7-11a7 7 0 0 1 14 0c0 4-2 8-7 11z" fill="#D7E5C4"/><path d="M12 8v13"/></svg>',
+  spot: '<svg viewBox="0 0 24 24" fill="none" stroke="#5B573F" stroke-width="1.8"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>'
+};
+function moonSVG(m, size = 22) {
+  const r = 9, cx = 12, cy = 12;
+  const f = m.f; const lit = m.illum;
+  const waxing = f < 0.5;
+  // terminator ellipse x-radius
+  const rx = Math.abs(1 - 2 * lit) * r;
+  const sweepOuter = waxing ? 1 : 0;
+  const sweepInner = (lit > 0.5) === waxing ? 1 : 0;
+  const d = `M${cx} ${cy - r} A${r} ${r} 0 0 ${sweepOuter} ${cx} ${cy + r} A${rx} ${r} 0 0 ${sweepInner} ${cx} ${cy - r}Z`;
+  return `<svg viewBox="0 0 24 24" width="${size}" height="${size}"><circle cx="12" cy="12" r="9" fill="#3C4651"/><path d="${d}" fill="#F3E7B8"/><circle cx="12" cy="12" r="9" fill="none" stroke="#5B573F" stroke-width="1"/></svg>`;
+}
+const KEY_ICON = { season: I.season, light: I.clock, sky: I.part, wind: I.breeze, pressure: I.steady, spot: I.spot, water: I.water, moon: null };
+function hookSVG(on, col) {
+  const f = on ? col : 'none', st = on ? col : '#B9A672';
+  return `<svg viewBox="0 0 26 14" aria-hidden="true"><path d="M2 7c3-5 10-6 15-2l5-3.5-1.4 5.5 1.4 5.5-5-3.5c-5 4-12 3-15-2z" fill="${f}" stroke="${st}" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6" cy="6.2" r="1" fill="${on ? '#F8F0D4' : st}"/></svg>`;
+}
+const RCOL = ['#8E8870', '#B0432D', '#C8752A', '#C79F24', '#6B9539', '#2E6740'];
+const RWORD = ['Closed', 'Poor', 'Fair', 'Good', 'Very good', 'Excellent'];
+function hooks(n) { let s = '<span class="hooks" aria-label="' + n + ' out of 5">'; for (let i = 1; i <= 5; i++) s += hookSVG(i <= n, RCOL[n]); return s + '</span>'; }
+function retrieveSVG(kind) {
+  const paths = {
+    drag: '<path d="M2 20 L108 20" stroke="#CBB880"/><path d="M4 18 q6-6 12 0 q4 0 6-2 q6-6 12 0 q4 0 6-2 q6-6 12 0 q4 0 6-2 q6-6 12 0 q4 0 6-2 q6-6 12 0" stroke="#1E4C77"/>',
+    hop: '<path d="M2 21 L108 21" stroke="#CBB880"/><path d="M4 19 q8-16 16 0 h6 q8-16 16 0 h6 q8-16 16 0 h6 q8-16 16 0" stroke="#1E4C77"/>',
+    vertical: '<path d="M2 23 L108 23" stroke="#CBB880"/><path d="M55 2 V18" stroke="#5B573F" stroke-dasharray="2 2"/><path d="M48 12 l3 -2 l3 2 l3 -2 l3 2 l3 -2" stroke="#1E4C77"/><circle cx="55" cy="21" r="2" fill="#5B573F" stroke="none"/>',
+    dead: '<path d="M2 21 L108 21" stroke="#CBB880"/><path d="M6 19 q4-5 8 0" stroke="#1E4C77"/><circle cx="34" cy="19" r="1.4" fill="#1E4C77" stroke="none"/><circle cx="44" cy="19" r="1.4" fill="#1E4C77" stroke="none"/><path d="M56 19 q4-5 8 0" stroke="#1E4C77"/><circle cx="84" cy="19" r="1.4" fill="#1E4C77" stroke="none"/><circle cx="94" cy="19" r="1.4" fill="#1E4C77" stroke="none"/>',
+    steady: '<path d="M4 13 H100" stroke="#1E4C77"/><path d="M96 9 l6 4 -6 4" stroke="#1E4C77"/>',
+    yoyo: '<path d="M2 23 L108 23" stroke="#CBB880"/><path d="M4 20 L16 5 L28 20 L40 5 L52 20 L64 5 L76 20 L88 5 L100 20" stroke="#1E4C77"/>',
+    jerk: '<path d="M4 13 l8-5 l6 5 l8-5 l6 5" stroke="#1E4C77"/><path d="M38 13 h4 M46 13 h4 M54 13 h4" stroke="#1E4C77" stroke-dasharray="1 3"/><path d="M62 13 l8-5 l6 5 l8-5 l6 5" stroke="#1E4C77"/>',
+    walk: '<path d="M2 6 H108" stroke="#7FA6C6"/><path d="M4 9 L12 15 L20 9 L28 15 L36 9 L44 15 L52 9 L60 15 L68 9 L76 15 L84 9 L92 15 L100 9" stroke="#1E4C77"/>',
+    static: '<path d="M2 22 L108 22" stroke="#CBB880"/><path d="M20 4 L52 20" stroke="#5B573F" stroke-dasharray="2 2"/><circle cx="56" cy="20" r="3" fill="#C29224" stroke="none"/><circle cx="64" cy="21" r="1.5" fill="#C29224" stroke="none"/><circle cx="48" cy="21" r="1.5" fill="#C29224" stroke="none"/><circle cx="70" cy="21" r="1.5" fill="#C29224" stroke="none"/>'
+  };
+  const label = { drag: 'Drag along the bottom', hop: 'Hop along the bottom', vertical: 'Shake in place', dead: 'Dead slow with pauses', steady: 'Steady retrieve', yoyo: 'Rip and let it fall', jerk: 'Jerk, jerk, pause', walk: 'Walk the surface', static: 'Static on the bottom' }[kind];
+  return `<svg class="retrieve" viewBox="0 0 110 26" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="${label}">${paths[kind] || ''}</svg>`;
+}
+const RETRIEVE_LABEL = { drag: 'Drag', hop: 'Hop', vertical: 'Shake in place', dead: 'Dead slow', steady: 'Steady', yoyo: 'Rip and fall', jerk: 'Jerk and pause', walk: 'Walk the dog', static: 'Static' };
+
+
+
+const TABS = [
+  ['map', 'Map', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>'],
+  ['planner', 'Planner', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>'],
+  ['almanac', 'Almanac', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 1 2-2h13"/></svg>']
+];
+const tabsHTML = TABS.map(t => `<a href="#${t[0]}" data-view="${t[0]}">${t[2]}<span>${t[1]}</span></a>`).join('');
+$('#toptabs').innerHTML = tabsHTML; $('#bottomtabs').innerHTML = tabsHTML;
+
+const SPECIES = {
+  bass: { name: 'Black bass', pt: 'Achigã', img: 'plates/bass.webp', word: 'lures' },
+  carp: { name: 'Carp', pt: 'Carpa', img: 'plates/carp.webp', word: 'baits' }
+};
+const OPTS = {
+  sky: [['sun', 'Sunny'], ['part', 'Partly'], ['cloud', 'Overcast'], ['rain', 'Rain']],
+  wind: [['calm', 'Calm'], ['breeze', 'Breeze'], ['windy', 'Windy']],
+  pressure: [['falling', 'Falling'], ['steady', 'Steady'], ['rising', 'Rising']]
+};
+const label = (k, v) => OPTS[k].find(o => o[0] === v)[1];
+
+// ---------- State ----------
+const todayYmd = ymdOf(new Date());
+const S = { dayIdx: 0, minute: 0, manual: store.get('manual', {}), wx: null, wxState: 'idle', wxMsg: '', spot: null, view: 'map', open: {} };
+function dayYmd() { return addDays(todayYmd, S.dayIdx); }
+function sunFor(ymd) { return E.sunTimes(localDate(ymd, 720), E.LAKE.lat, E.LAKE.lng); }
+function legalMinutes(ymd) { const sun = sunFor(ymd); const w = E.legalWindow(sun); return { a: Math.floor(minutesOf(w.start) / 15) * 15, b: Math.floor(minutesOf(w.end) / 15) * 15, sun }; }
+(function initTime() {
+  const nowMin = minutesOf(new Date()); const L = legalMinutes(todayYmd);
+  if (nowMin < L.a) { S.minute = Math.round((minutesOf(L.sun.rise) + 30) / 15) * 15; }
+  else if (nowMin > L.b) { S.dayIdx = 1; const L2 = legalMinutes(addDays(todayYmd, 1)); S.minute = Math.round((minutesOf(L2.sun.rise) + 30) / 15) * 15; S.note = 'Showing tomorrow: today\'s fishing hours are over.'; }
+  else S.minute = Math.round(nowMin / 15) * 15;
+})();
+
+function wxKey(ymd, min) { return `${ymd}T${String(Math.floor(min / 60)).padStart(2, '0')}:00`; }
+function wxAt(ymd, min) {
+  if (!S.wx) return null;
+  const h = S.wx.hourly[wxKey(ymd, min)]; if (!h) return null;
+  const p = S.wx.hourly[wxKey(ymd, Math.max(0, min - 180))];
+  const sky = h.precip >= 0.2 ? 'rain' : h.cloud < 30 ? 'sun' : h.cloud < 70 ? 'part' : 'cloud';
+  const wind = h.wind < 8 ? 'calm' : h.wind <= 20 ? 'breeze' : 'windy';
+  let pressure = 'steady'; if (p && h.press != null && p.press != null) { const d = h.press - p.press; pressure = d < -1 ? 'falling' : d > 1 ? 'rising' : 'steady'; }
+  return { sky, wind, pressure, raw: h };
+}
+// Conditions for one moment; both species share them
+function condsAt(ymd, min) {
+  const live = wxAt(ymd, min); const base = live || { sky: 'part', wind: 'breeze', pressure: 'steady' }; const m = S.manual;
+  const c = E.conditionsAt(localDate(ymd, min), { species: 'bass', sky: m.sky || base.sky, wind: m.wind || base.wind, pressure: m.pressure || base.pressure, waterT: m.waterT != null ? m.waterT : null });
+  c._live = live; return c;
+}
+function both(spot, c) {
+  const bass = E.evaluate(spot, Object.assign({}, c, { species: 'bass' }));
+  const carp = E.evaluate(spot, Object.assign({}, c, { species: 'carp' }));
+  const best = !bass.legal.ok ? (carp.legal.ok ? 'carp' : 'bass') : (carp.legal.ok && carp.raw > bass.raw ? 'carp' : 'bass');
+  const top = best === 'bass' ? bass : carp;
+  return { bass, carp, best, rating: Math.max(bass.legal.ok ? bass.rating : 0, carp.legal.ok ? carp.rating : 0), top };
+}
+
+// ---------- Conditions pill and sheet ----------
+function pillHTML(c) {
+  const ymd = dayYmd();
+  const live = S.wxState === 'ok' && c._live;
+  const bits = [`${dayName(ymd, S.dayIdx)} ${hhmm(S.minute)}`, label('sky', c.sky), label('wind', c.wind), `${c.waterT}°C water`];
+  return `${I[c.sky]}<span class="t">${bits.join(' · ')}</span><span class="dot${live ? ' on' : ''}" title="${live ? 'Live forecast' : 'Typical conditions'}"></span><span class="chev">▾</span>`;
+}
+function renderPills() {
+  const c = condsAt(dayYmd(), S.minute);
+  document.querySelectorAll('.condpill').forEach(p => p.innerHTML = pillHTML(c));
+  return c;
+}
+function openConditions() {
+  renderConditions(); $('#scrim').hidden = false;
+  setTimeout(() => { const f = $('#csheet button'); if (f) f.focus(); }, 50);
+}
+function closeConditions() { $('#scrim').hidden = true; }
+$('#scrim').addEventListener('click', e => { if (e.target.id === 'scrim') closeConditions(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeConditions(); });
+function renderConditions() {
+  const ymd = dayYmd(); const L = legalMinutes(ymd);
+  S.minute = Math.max(L.a, Math.min(L.b, S.minute));
+  const c = condsAt(ymd, S.minute); const m = S.manual;
+  const segRow = (key) => `<div class="seg" role="group">${OPTS[key].map(o => `<button aria-pressed="${c[key] === o[0]}" data-k="${key}" data-v="${o[0]}">${I[o[0]]}<span>${o[1]}</span></button>`).join('')}</div>`;
+  const reset = key => m[key] != null ? `<button class="linkbtn" data-reset="${key}">${S.wx ? 'Use forecast' : 'Use default'}</button>` : (c._live ? '<span style="text-transform:none;letter-spacing:0">from forecast</span>' : '');
+  let days = ''; for (let i = 0; i < 3; i++) days += `<button aria-pressed="${S.dayIdx === i}" data-day="${i}"><span>${dayName(addDays(todayYmd, i), i)}</span></button>`;
+  const rise = minutesOf(c.sun.rise), set = minutesOf(c.sun.set);
+  const liveTxt = S.wxState === 'ok' ? `<p><b>Live forecast</b> loaded at ${fmtTime(new Date(S.wx.fetchedAt))}</p><p class="note">Open-Meteo, hourly</p>`
+    : S.wxState === 'busy' ? '<p><b>Fetching the forecast…</b></p>'
+    : S.wxState === 'error' ? `<p class="err">${esc(S.wxMsg)}</p>`
+    : '<p><b>Typical conditions</b></p><p class="note">Set them below, or load the live forecast.</p>';
+  $('#csheet').innerHTML = `<span class="grab" aria-hidden="true" style="display:block;width:44px;height:5px;border-radius:9px;background:var(--rule);margin:2px auto 8px"></span>
+    <h2 id="ctitle">Conditions</h2>
+    <div class="livebox${S.wxState === 'ok' ? ' on' : ''}"><div>${liveTxt}</div><button class="btn" id="livebtn" style="flex:none;padding:9px 14px;min-height:40px">${S.wxState === 'ok' ? 'Refresh' : 'Get live weather'}</button></div>
+    <div class="cgroup"><div class="eyebrow">Day</div><div class="seg" role="group">${days}</div></div>
+    <div class="cgroup"><div class="eyebrow"><span>Time</span><span style="text-transform:none;letter-spacing:0">Fishing hours ${hhmm(L.a)}–${hhmm(L.b)}</span></div>
+      <div class="timebig"><span id="tbig">${hhmm(S.minute)}</span><small id="tlight">${E.LIGHT_LABEL[c.light]}</small></div>
+      <input type="range" id="tslider" min="${L.a}" max="${L.b}" step="15" value="${S.minute}" aria-label="Time of day">
+      <div class="quick"><button data-q="${Math.round((rise + 30) / 15) * 15}">Dawn</button><button data-q="${Math.round((minutesOf(c.sun.noon)) / 15) * 15}">Midday</button><button data-q="${Math.round((set - 45) / 15) * 15}">Dusk</button>${S.dayIdx === 0 ? `<button data-q="now">Now</button>` : ''}</div></div>
+    <div class="cgroup"><div class="eyebrow"><span>Sky</span>${reset('sky')}</div>${segRow('sky')}</div>
+    <div class="cgroup"><div class="eyebrow"><span>Wind</span>${reset('wind')}</div>${segRow('wind')}</div>
+    <div class="cgroup"><div class="eyebrow"><span>Air pressure</span>${reset('pressure')}</div>${segRow('pressure')}<p class="lede" style="font-size:12.5px;margin-top:6px">Falling before a front often sparks a bite; rising after one slows it.</p></div>
+    <div class="cgroup"><div class="eyebrow"><span>Water temperature</span>${m.waterT != null ? '<button class="linkbtn" data-reset="waterT">Use monthly estimate</button>' : '<span style="text-transform:none;letter-spacing:0">estimate for the month</span>'}</div>
+      <div class="stepper"><button data-w="-1" aria-label="Colder">−</button><output id="wt">${c.waterT} °C</output><button data-w="1" aria-label="Warmer">+</button></div></div>
+    <div class="cgroup"><div class="eyebrow">Sun and moon</div><div class="facts"><span>${I.sun}${fmtTime(c.sun.rise)} – ${fmtTime(c.sun.set)}</span><span>${moonSVG(c.moon)}${c.moon.name}</span></div></div>
+    <div class="cgroup"><button class="btn" id="cdone">Show results</button></div>`;
+  const cs = $('#csheet');
+  cs.querySelectorAll('[data-day]').forEach(b => b.onclick = () => { S.dayIdx = +b.dataset.day; S.note = null; update(); renderConditions(); });
+  cs.querySelectorAll('[data-k]').forEach(b => b.onclick = () => { S.manual[b.dataset.k] = b.dataset.v; store.set('manual', S.manual); update(); renderConditions(); });
+  cs.querySelectorAll('[data-reset]').forEach(b => b.onclick = () => { delete S.manual[b.dataset.reset]; store.set('manual', S.manual); update(); renderConditions(); });
+  cs.querySelectorAll('[data-w]').forEach(b => b.onclick = () => { S.manual.waterT = Math.max(4, Math.min(32, c.waterT + +b.dataset.w)); store.set('manual', S.manual); update(); renderConditions(); });
+  cs.querySelectorAll('[data-q]').forEach(b => b.onclick = () => { const v = b.dataset.q === 'now' ? Math.round(minutesOf(new Date()) / 15) * 15 : +b.dataset.q; S.minute = Math.max(L.a, Math.min(L.b, v)); S.note = null; update(); renderConditions(); });
+  const sl = $('#tslider');
+  sl.oninput = () => { S.minute = +sl.value; S.note = null; $('#tbig').textContent = hhmm(S.minute); $('#tlight').textContent = E.LIGHT_LABEL[condsAt(ymd, S.minute).light]; scheduleUpdate(); };
+  sl.onchange = () => renderConditions();
+  $('#livebtn').onclick = fetchWeather;
+  $('#cdone').onclick = closeConditions;
+}
+
+// ---------- Live weather (Open-Meteo) ----------
+const WX_URL = 'https://api.open-meteo.com/v1/forecast?latitude=39.62&longitude=-8.27&hourly=cloud_cover,wind_speed_10m,precipitation,pressure_msl,temperature_2m&forecast_days=3&past_days=1&timezone=Europe%2FLisbon';
+async function fetchWeather() {
+  if (S.wxState === 'busy') return;
+  S.wxState = 'busy'; if (!$('#scrim').hidden) renderConditions();
+  try {
+    const r = await fetch(WX_URL); if (!r.ok) throw { code: 'http' };
+    const H = (await r.json()).hourly, hourly = {};
+    H.time.forEach((t, k) => { hourly[t] = { cloud: H.cloud_cover[k], wind: H.wind_speed_10m[k], precip: H.precipitation[k], press: H.pressure_msl[k], temp: H.temperature_2m[k] }; });
+    S.wx = { hourly, fetchedAt: Date.now() }; S.wxState = 'ok';
+  } catch (e) {
+    S.wxState = 'error';
+    S.wxMsg = navigator.onLine === false ? 'You are offline. Set the conditions by hand, or try again when you have signal.' : 'The forecast could not be fetched just now. Try again, or set conditions by hand.';
+  }
+  update(); if (!$('#scrim').hidden) renderConditions();
+}
+
+// ---------- Map ----------
+const t2lng = (x, z) => x / 2 ** z * 360 - 180;
+const t2lat = (y, z) => { const n = Math.PI - 2 * Math.PI * y / 2 ** z; return 180 / Math.PI * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n))); };
+const TB = L.latLngBounds([t2lat(6232, 14), t2lng(7808, 14)], [t2lat(6214, 14), t2lng(7821, 14)]);
+const map = L.map('map', { zoomControl: false, attributionControl: true, minZoom: 11, maxZoom: 16, zoomSnap: 0.5 });
+L.control.zoom({ position: 'topright' }).addTo(map);
+map.attributionControl.setPrefix(false);
+L.tileLayer('tiles/{z}/{x}/{y}.jpg', { minZoom: 11, maxZoom: 16, maxNativeZoom: 14, bounds: TB,
+  attribution: '<a href="https://s2maps.eu" target="_blank" rel="noopener">Sentinel-2 cloudless 2024 by EOX</a> (CC BY-NC-SA 4.0), modified Copernicus Sentinel data' }).addTo(map);
+L.circle([E.DAM.lat, E.DAM.lng], { radius: E.DAM.radius, color: '#E86A50', weight: 2, dashArray: '5 5', fillColor: '#B0432D', fillOpacity: .25 }).bindTooltip('Dam: no fishing within 150 m', { direction: 'left' }).addTo(map);
+L.marker([E.SHOP.lat, E.SHOP.lng], { icon: L.divIcon({ className: '', html: '<div class="pinw"><span class="shop"></span><span class="plabel" style="left:16px;top:-9px">Tackle shop<i>Tomaraventura, Tomar</i></span></div>', iconSize: [0, 0] }) })
+  .bindPopup(`<b>${E.SHOP.name}</b><br>${E.SHOP.hours}<br><a href="${E.SHOP.maps}" target="_blank" rel="noopener">Directions</a>`).addTo(map);
+const markers = {};
+E.SPOTS.forEach(s => { const mk = L.marker([s.lat, s.lng], { icon: L.divIcon({ className: '', html: '', iconSize: [0, 0] }), title: s.name }).addTo(map); mk.on('click', () => selectSpot(s.id)); markers[s.id] = mk; });
+map.on('click', () => { if (S.spot) selectSpot(null); });
+const isWide = () => window.matchMedia('(min-width:900px)').matches;
+function fitSpots() {
+  const b = L.latLngBounds(E.SPOTS.map(s => [s.lat, s.lng])).extend([E.DAM.lat, E.DAM.lng]);
+  map.fitBounds(b, { paddingTopLeft: [24, 70], paddingBottomRight: isWide() ? [150, 24] : [120, peekH() + 10] });
+}
+let results = {};
+function renderMap(c) {
+  results = {};
+  E.SPOTS.forEach(s => {
+    const r = both(s, c); results[s.id] = r;
+    const sub = r.rating ? `${SPECIES[r.best].name.replace('Black bass', 'Bass')} · ${r.top.lures[0].lure.name}` : 'Outside hours';
+    markers[s.id].setIcon(L.divIcon({ className: '', iconSize: [0, 0],
+      html: `<div class="pinw"><button class="pin r${r.rating}${S.spot === s.id ? ' sel' : ''}" aria-label="${esc(s.name)}, rated ${r.rating} of 5">${r.rating || '–'}</button><span class="plabel">${esc(s.short)}<i>${esc(sub)}</i></span></div>` }));
+  });
+  const flag = $('#flag'); const any = Object.values(results).some(r => r.rating > 0);
+  const bassClosed = c.phase === 'closed';
+  flag.hidden = any && !bassClosed;
+  flag.textContent = !any ? 'Outside fishing hours' : 'Black bass season closed until 15 May';
+}
+
+// ---------- Sheet ----------
+const sheet = $('#sheet');
+const peekH = () => 132;
+const halfH = () => Math.round($('main').clientHeight * 0.56);
+const fullH = () => $('main').clientHeight - 8;
+let sheetState = 'peek';
+function setSheet(st) { sheetState = st; if (isWide()) { sheet.style.height = ''; return; } sheet.style.height = (st === 'peek' ? peekH() : st === 'half' ? halfH() : fullH()) + 'px'; }
+(function dragSheet() {
+  const head = $('#sheethead'); let y0 = null, h0 = 0, moved = false;
+  head.addEventListener('pointerdown', e => { if (isWide() || e.target.closest('button,a')) return; y0 = e.clientY; h0 = sheet.offsetHeight; moved = false; sheet.classList.add('drag'); head.setPointerCapture(e.pointerId); });
+  head.addEventListener('pointermove', e => { if (y0 == null) return; const dy = e.clientY - y0; if (Math.abs(dy) > 4) moved = true; sheet.style.height = Math.max(peekH() - 40, Math.min(fullH(), h0 - dy)) + 'px'; });
+  const end = () => { if (y0 == null) return; sheet.classList.remove('drag'); const h = sheet.offsetHeight; y0 = null;
+    if (!moved) { setSheet(sheetState === 'peek' ? 'half' : sheetState === 'half' ? 'full' : 'half'); return; }
+    const opts = [['peek', peekH()], ['half', halfH()], ['full', fullH()]]; opts.sort((a, b) => Math.abs(a[1] - h) - Math.abs(b[1] - h)); setSheet(opts[0][0]); };
+  head.addEventListener('pointerup', end); head.addEventListener('pointercancel', end);
+})();
+
+function lureFull(r, c, rank) {
+  const l = r.lure;
+  const col = r.score >= 75 ? RCOL[5] : r.score >= 60 ? RCOL[4] : r.score >= 45 ? RCOL[3] : r.score >= 30 ? RCOL[2] : RCOL[1];
+  const pos = r.parts.filter(p => p.n > 0).sort((a, b) => b.n - a.n).slice(0, 3);
+  const neg = r.parts.filter(p => p.n < 0).sort((a, b) => a.n - b.n).slice(0, 1);
+  const colour = E.colourTip(l, c);
+  return `<article class="lure"><div class="lure-top"><img src="${l.photo}" alt="${esc(l.name)}" loading="lazy">
+    <div><div class="rank">${rank}</div><h4>${esc(l.name)}</h4><div class="bar"><i style="width:${r.score}%;background:${col}"></i></div>${retrieveSVG(l.retrieve)}</div></div>
+    <div class="lure-body"><div class="reasons">${pos.map(p => `<span class="rchip">${esc(p.why)}</span>`).join('')}${neg.map(p => `<span class="rchip neg">${esc(p.why)}</span>`).join('')}</div>
+    <dl class="kv"><dt>How</dt><dd>${esc(l.how)}</dd>${colour ? `<dt>Colour</dt><dd>${esc(colour)}</dd>` : ''}<dt>Rig</dt><dd>${esc(l.rig)}${l.ref ? ` <a href="${l.ref.url}" target="_blank" rel="noopener">${esc(l.ref.label)}</a>` : ''}</dd></dl></div></article>`;
+}
+function speciesBlock(key, ev, c, spotId) {
+  const sp = SPECIES[key];
+  const head = `<div class="sp-head"><img src="${sp.img}" alt=""><div><h3>${sp.name}</h3><div class="sub">${ev.legal.ok ? `${hooks(ev.rating)}<span>${RWORD[ev.rating]}</span>` : ''}</div></div></div>`;
+  if (!ev.legal.ok) return `<section class="sp">${head}<div class="closednote">${esc(ev.legal.why)}</div></section>`;
+  const alts = ev.lures.slice(1, 3).map((r, i) => {
+    const id = `${spotId}-${key}-${i}`; const open = !!S.open[id];
+    return `<button class="alt" aria-expanded="${open}" data-alt="${id}"><img src="${r.lure.photo}" alt=""><span><b>${esc(r.lure.name)}</b><small>${i === 0 ? 'Second choice' : 'Third choice'} · ${RETRIEVE_LABEL[r.lure.retrieve].toLowerCase()}</small></span><span class="sc">${r.score}</span></button>${open ? `<div class="altdetail">${lureFull(r, c, i === 0 ? 'Second choice' : 'Third choice')}</div>` : ''}`;
+  }).join('');
+  return `<section class="sp">${head}${lureFull(ev.lures[0], c, 'Best ' + (key === 'bass' ? 'lure' : 'bait') + ' now')}${alts}</section>`;
+}
+function hourStrip(spot) {
+  const ymd = dayYmd(); const L = legalMinutes(ymd);
+  const hours = []; for (let m = Math.floor(L.a / 60) * 60; m < L.b; m += 60) hours.push(m);
+  const at = m => Math.max(L.a, Math.min(L.b - 15, m + 30));
+  const curH = Math.floor(S.minute / 60) * 60;
+  const rows = ['bass', 'carp'].map(k => `<span class="lab">${k === 'bass' ? 'Bass' : 'Carp'}</span>` + hours.map(m => { const c = condsAt(ymd, at(m)); const ev = E.evaluate(spot, Object.assign({}, c, { species: k })); const r = ev.legal.ok ? ev.rating : 0; return `<button class="${m === curH ? 'cur' : ''}" style="background:${RCOL[r]}" data-hm="${at(m)}" aria-label="${k} at ${hhmm(m)}: ${RWORD[r]}"></button>`; }).join('')).join('');
+  const marks = [hours[0], hours[Math.floor(hours.length / 2)], hours[hours.length - 1]];
+  return `<div class="strip"><div class="eyebrow">${dayName(ymd, S.dayIdx)} at this spot</div><div class="strip-grid" style="--n:${hours.length}">${rows}</div><div class="strip-hours">${marks.map(m => `<span>${hhmm(m)}</span>`).join('')}</div></div>`;
+}
+function renderSheet(c) {
+  const top = $('#sheettop'), body = $('#sheetbody');
+  const ymd = dayYmd();
+  if (!S.spot) {
+    const list = E.SPOTS.map(s => results[s.id]).sort((a, b) => b.rating - a.rating || b.top.raw - a.top.raw);
+    const best = list[0];
+    top.innerHTML = best.rating
+      ? `<div class="eyebrow">Best ${S.dayIdx === 0 ? 'right now' : dayName(ymd, S.dayIdx).toLowerCase() + ' at ' + hhmm(S.minute)}</div><div class="stitle">${esc(best.top.spot.name)}</div><div class="sub">${hooks(best.rating)}<span>${SPECIES[best.best].name} on a ${esc(best.top.lures[0].lure.name.toLowerCase())}</span></div>`
+      : `<div class="eyebrow">${dayName(ymd, S.dayIdx)} ${hhmm(S.minute)}</div><div class="stitle">Outside fishing hours</div><div class="sub">Fishing runs from 30 min before sunrise to 30 min after sunset.</div>`;
+    body.innerHTML = `<div class="stack"><div class="eyebrow">All spots, best first</div>${list.map(r => `<button class="spotrow" data-spot="${r.top.spot.id}"><span class="n" style="background:${RCOL[r.rating]}">${r.rating || '–'}</span><span><b>${esc(r.top.spot.name)}</b><small>${r.rating ? `${SPECIES[r.best].name} · ${esc(r.top.lures[0].lure.name)}` : 'Outside hours'}</small></span><span aria-hidden="true">›</span></button>`).join('')}
+      <p class="lede" style="font-size:13px">Tap a pin or a spot for lures and baits for both black bass and carp. Tap the bar at the top to change the time or the weather.</p></div>`;
+    body.querySelectorAll('[data-spot]').forEach(b => b.onclick = () => selectSpot(b.dataset.spot));
+    return;
+  }
+  const r = results[S.spot]; const s = r.top.spot;
+  const reasons = r.bass.fit.why.concat(r.bass.act.why).filter((w, i, a) => a.findIndex(x => x.why === w.why) === i);
+  top.innerHTML = `<button class="closebtn" id="closespot" aria-label="Back to all spots">×</button><div class="eyebrow">${esc(E.TYPE_LABEL[s.type])} · ${dayName(ymd, S.dayIdx)} ${hhmm(S.minute)}</div><div class="stitle">${esc(s.name)}</div>
+    <div class="sub">${r.rating ? `${hooks(r.rating)}<span>Best: ${SPECIES[r.best].name.toLowerCase()} on a ${esc(r.top.lures[0].lure.name.toLowerCase())}</span>` : '<span>Outside fishing hours</span>'}</div>`;
+  body.innerHTML = `<div class="stack">
+    <div class="btnrow">${s.maps ? `<a class="btn" href="${s.maps}" target="_blank" rel="noopener">Directions</a>` : `<a class="btn" href="https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lng}" target="_blank" rel="noopener">Directions</a>`}<button class="btn ghost" id="chgcond">Change time or weather</button></div>
+    <p class="about">${esc(s.about)}</p>
+    ${reasons.length ? `<div class="reasons">${reasons.map(w => `<span class="rchip${w.n < 0 ? ' neg' : ''}">${esc(w.why)}</span>`).join('')}</div>` : ''}
+    ${hourStrip(s)}
+    ${['bass', 'carp'].sort((a, b) => (a === r.best ? -1 : b === r.best ? 1 : 0)).map(k => speciesBlock(k, r[k], c, s.id)).join('')}
+    <p class="lede" style="font-size:13px"><b>Access:</b> ${esc(s.access)}</p></div>`;
+  $('#closespot').onclick = () => selectSpot(null);
+  $('#chgcond').onclick = openConditions;
+  body.querySelectorAll('[data-alt]').forEach(b => b.onclick = () => { S.open[b.dataset.alt] = !S.open[b.dataset.alt]; renderSheet(c); });
+  body.querySelectorAll('[data-hm]').forEach(b => b.onclick = () => { S.minute = Math.round(+b.dataset.hm / 15) * 15; S.note = null; update(); });
+}
+function selectSpot(id) {
+  const prev = S.spot; S.spot = id;
+  update();
+  $('#sheetbody').scrollTop = 0;
+  if (id) {
+    setSheet(prev ? sheetState : 'half');
+    const s = E.SPOTS.find(x => x.id === id);
+    if (!isWide()) { const y = map.latLngToContainerPoint([s.lat, s.lng]).y; const want = ($('main').clientHeight - halfH()) * 0.45; map.panBy([0, y - want], { animate: true }); }
+    else if (!map.getBounds().pad(-0.1).contains([s.lat, s.lng])) map.panTo([s.lat, s.lng]);
+  } else setSheet('peek');
+}
+
+// ---------- Planner ----------
+function renderPlanner() {
+  const ymd = dayYmd(); const L = legalMinutes(ymd);
+  const hours = []; for (let m = Math.floor(L.a / 60) * 60; m < L.b; m += 60) hours.push(m);
+  const at = m => Math.max(L.a, Math.min(L.b - 15, m + 30));
+  const riseH = Math.floor(minutesOf(L.sun.rise) / 60) * 60, setH = Math.floor(minutesOf(L.sun.set) / 60) * 60;
+  const curH = Math.floor(S.minute / 60) * 60;
+  const grid = hours.map(m => { const c = condsAt(ymd, at(m)); return { m, c, res: E.SPOTS.map(s => both(s, c)) }; });
+  const short = { jig: 'Jig', texas: 'Texas', dropshot: 'Drop', ned: 'Ned', spinner: 'Spin', lipless: 'Lipless', crank: 'Crank', jerk: 'Jerk', topwater: 'Top', swim: 'Swim', tiger: 'Tiger', boilie: 'Boilie', particles: 'Maize', popup: 'Pop-up', surface: 'Surface' };
+  const cells = []; grid.forEach(g => g.res.forEach(r => { if (r.rating) cells.push({ m: g.m, r }); }));
+  cells.sort((a, b) => b.r.rating - a.r.rating || b.r.top.raw - a.r.top.raw);
+  const wins = []; const used = new Set();
+  for (const x of cells) {
+    if (wins.length >= 3) break; const id = x.r.top.spot.id; if (used.has(id)) continue;
+    const col = grid.map(g => g.res.find(r => r.top.spot.id === id));
+    const idx = grid.findIndex(g => g.m === x.m); let a = idx, b = idx;
+    while (a > 0 && col[a - 1].rating >= x.r.rating) a--; while (b < col.length - 1 && col[b + 1].rating >= x.r.rating) b++;
+    wins.push({ r: x.r, a: grid[a].m, b: grid[b].m + 60 }); used.add(id);
+  }
+  const head = '<span></span>' + E.SPOTS.map(s => `<span class="h">${esc(s.short.replace('The ', ''))}</span>`).join('');
+  const rowsH = grid.map(g => `<span class="tm">${hhmm(g.m)}${g.m === riseH ? '<span class="sunmark" title="Sunrise">↑</span>' : g.m === setH ? '<span class="sunmark" title="Sunset">↓</span>' : ''}</span>` +
+    g.res.map(r => `<button class="${g.m === curH ? 'cur' : ''}" style="background:${RCOL[r.rating]}" data-s="${r.top.spot.id}" data-m="${at(g.m)}" aria-label="${esc(r.top.spot.name)} ${hhmm(g.m)}: ${RWORD[r.rating]}">${r.rating || '–'}<small>${r.rating ? (r.best === 'bass' ? 'B' : 'C') + ' ' + short[r.top.lures[0].lure.id] : ''}</small></button>`).join('')).join('');
+  $('#planner').innerHTML = `<div class="eyebrow">${dayName(ymd, S.dayIdx)} · fishing hours ${hhmm(L.a)}–${hhmm(L.b)}</div>
+    <h1>Best times and places</h1>
+    <div class="condline"><button class="condpill" aria-haspopup="dialog">${pillHTML(condsAt(ymd, S.minute))}</button></div>
+    ${wins.length ? `<div class="windows">${wins.map(w => `<button class="win" data-s="${w.r.top.spot.id}" data-m="${at(w.a)}"><img src="${w.r.top.lures[0].lure.photo}" alt=""><span><span class="t">${hhmm(w.a)}–${hhmm(Math.min(w.b, L.b))}</span><b>${esc(w.r.top.spot.name)}</b><small>${hooks(w.r.rating)} ${SPECIES[w.r.best].name} · ${esc(w.r.top.lures[0].lure.name)}</small></span></button>`).join('')}</div>` : ''}
+    <div class="heat"><div class="hgrid">${head}${rowsH}</div></div>
+    <div class="keyrow">${[1, 2, 3, 4, 5].map(n => `<span><i style="background:${RCOL[n]}"></i>${RWORD[n]}</span>`).join('')}<span>B bass · C carp</span><span class="sunmark">↑ sunrise ↓ sunset</span></div>
+    <p class="lede" style="font-size:13px">${S.wx ? 'Each hour uses the live hourly forecast.' : 'Every hour uses the same conditions. Load the live forecast for hour-by-hour weather.'} Tap a square to open that spot at that time.</p>`;
+  $('#planner .condpill').onclick = openConditions;
+  $('#planner').querySelectorAll('[data-s]').forEach(b => b.onclick = () => { S.minute = Math.round(+b.dataset.m / 15) * 15; location.hash = '#map'; setView('map'); selectSpot(b.dataset.s); });
+}
+
+// ---------- Almanac ----------
+const PLATES = [
+  { id: 'bass', img: 'plates/bass.webp', en: 'Black bass', pt: 'Achigã', la: 'Micropterus salmoides', status: () => E.bassOpen(new Date()) ? ['open', 'Season open'] : ['closed', 'Closed until 15 May'],
+    text: 'The jaw reaches back past the eye; a dark band runs along the side. The lake\'s main sport fish. Keep only fish over 20 cm, or release them.',
+    credit: ['Duane Raver, U.S. Fish and Wildlife Service · public domain', 'https://commons.wikimedia.org/wiki/File:Largemouth_bass_-_DPLA_-_(white_background).jpg'] },
+  { id: 'carp', img: 'plates/carp.webp', en: 'Common carp', pt: 'Carpa', la: 'Cyprinus carpio', status: () => ['open', 'Open all year'],
+    text: 'Fully scaled and bronze, with two pairs of barbels. A carp directory lists fish over 60 lb here, rated hard to catch. No size limit.',
+    credit: ['Duane Raver, USFWS · public domain', 'https://commons.wikimedia.org/wiki/File:Common_carp_(white_background).jpg'] },
+  { id: 'mirror', img: 'plates/mirror.webp', en: 'Mirror carp', pt: 'Carpa-espelho', la: 'Cyprinus carpio', status: () => ['open', 'Open all year'],
+    text: 'The same species with a few large, uneven scales. Fished for exactly like the common carp.',
+    credit: ['Duane Raver, USFWS · public domain', 'https://commons.wikimedia.org/wiki/File:Mirror_carp_fish_cyprinus_carpio.jpg'] },
+  { id: 'barbel', img: 'plates/barbel.webp', en: 'Iberian barbel', pt: 'Barbo-comum', la: 'Luciobarbus bocagei', status: () => E.barbelOpen(new Date()) ? ['open', 'Season open'] : ['closed', 'Closed until 15 June'],
+    text: 'Long and low with a downturned mouth and four barbels. Takes carp baits and fights hard. Minimum 20 cm. Plate shows its near-identical European cousin.',
+    credit: ['Krüger, European barbel · public domain', 'https://commons.wikimedia.org/wiki/File:Barbus_barbus1.jpg'] },
+  { id: 'boga', img: 'plates/boga.webp', en: 'Boga', pt: 'Boga-comum', la: 'Pseudochondrostoma polylepis', status: () => E.barbelOpen(new Date()) ? ['open', 'Season open'] : ['closed', 'Closed until 15 June'],
+    text: 'Slim and silver, with a small mouth set under the snout. Not a target in itself, but where bogas shoal, bass follow. Minimum 15 cm. Plate shows the closely related nase.',
+    credit: ['Krüger, nase · public domain', 'https://commons.wikimedia.org/wiki/File:Chondrostoma_nasus.jpg'] },
+  { id: 'shad', img: 'plates/shad.webp', en: 'Allis shad', pt: 'Sável', la: 'Alosa alosa', status: () => ['warn', 'Release it'],
+    text: 'A landlocked population lives in the reservoir. Only licensed professional fishers may take it, so return any you hook.',
+    credit: ['Krüger · public domain', 'https://commons.wikimedia.org/wiki/File:Alosa_alosa.jpg'] },
+  { id: 'crayfish', img: 'plates/crayfish.jpg', mult: true, en: 'Red swamp crayfish', pt: 'Lagostim-vermelho', la: 'Procambarus clarkii', status: () => ['grey', 'Invasive'],
+    text: 'The bass\'s favourite food and the reason crayfish-coloured jigs work. It also strips soft carp baits, so use tiger nuts or hard boilies.',
+    credit: ['After Hagen, in Huxley\'s The Crayfish (1880) · public domain', 'https://commons.wikimedia.org/wiki/File:FMIB_35672_Cambarus_clarkii,_maleafter_Hagen.jpeg'] },
+  { id: 'pike', img: 'plates/pike.webp', en: 'Pike', pt: 'Lúcio', la: 'Esox lucius', status: () => ['grey', 'Unconfirmed here'],
+    text: 'Duck-bill snout and sharp teeth. Not confirmed in this lake. If you catch one, the law says it must not go back alive.',
+    credit: ['Timothy Knepp, USFWS · public domain', 'https://commons.wikimedia.org/wiki/File:Esox_lucius1.jpg'] }
+];
+function q(text) { return `<blockquote class="old"><span>${esc(text)}</span></blockquote>`; }
+function src(who, url) { return `<p class="qsrc">Quoted from ${who} · <a href="${url}" target="_blank" rel="noopener">read the book</a></p>`; }
+const HEN = 'James A. Henshall, Bass, Pike, Perch and Others (1903)', HENU = 'https://gutenberg.org/ebooks/40018';
+const WAL = 'Izaak Walton, The Compleat Angler (1653)', WALU = 'https://www.gutenberg.org/ebooks/683';
+function renderAlmanac() {
+  const bassL = E.LURES.filter(l => l.species === 'bass');
+  const cols = [['season', 'winter', 'Cold'], ['season', 'prespawn', 'Pre-spawn'], ['season', 'summer', 'Summer'], ['season', 'autumn', 'Autumn'], ['light', 'dawn', 'Dawn/dusk'], ['light', 'midday', 'Midday'], ['sky', 'cloud', 'Overcast'], ['sky', 'sun', 'Sunny'], ['wind', 'windy', 'Windy'], ['wind', 'calm', 'Calm'], ['pressure', 'rising', 'After front']];
+  const tbl = { season: E.W.phase, light: E.W.light, sky: E.W.sky, wind: E.W.wind, pressure: E.W.pressure };
+  const cell = v => { if (!v) return '<td>·</td>'; const c = v >= 2.5 ? 'p3' : v >= 1.5 ? 'p2' : v > 0 ? 'p1' : v <= -2.5 ? 'n3' : v <= -1.5 ? 'n2' : 'n1'; return `<td><span class="m ${c}">${v > 0 ? '+' : '−'}${Math.abs(v)}</span></td>`; };
+  const matrix = `<div class="matrixwrap"><table class="matrix"><thead><tr><th>Lure</th>${cols.map(c => `<th>${c[2]}</th>`).join('')}</tr></thead><tbody>${bassL.map(l => `<tr><td>${esc(l.name)}</td>${cols.map(c => cell((tbl[c[0]][c[1]] || {})[l.id])).join('')}</tr>`).join('')}</tbody></table></div>`;
+  $('#almanac').innerHTML = `
+  <div class="cover"><div><div class="eyebrow">A field guide for one lake</div><h1>The Angler's Almanac<em>of Castelo do Bode</em></h1>
+    <p class="lede">The fish, the lures and the old wisdom, with notes on what works on the Zêzere today. Old books are quoted as written; the green boxes say what still holds.</p>
+    <nav class="toc"><a href="#plates" data-jump>Plates</a><a href="#ch1" data-jump>I. Black bass</a><a href="#ch2" data-jump>II. Carp</a><a href="#ch3" data-jump>III. Barbel</a><a href="#ch4" data-jump>IV. Weather and moon</a><a href="#ch5" data-jump>V. Lures</a><a href="#ch6" data-jump>VI. Rules</a></nav></div>
+    <figure style="margin:0"><img src="plates/h-shad.jpg" alt="Victorian colour plate of two shad on a riverbank"><figcaption class="credit">A. F. Lydon, British Fresh-water Fishes (1879) · public domain</figcaption></figure></div>
+
+  <section id="plates" class="chapter" style="border-top:0"><div class="num">The plates</div><h2>Fish of the reservoir</h2>
+    <div class="plates">${PLATES.map((p, i) => { const st = p.status(); return `<article class="plate"><span class="no">Pl. ${i + 1}</span><figure><img ${p.mult ? 'class="mult"' : ''} src="${p.img}" alt="Illustration of ${esc(p.en)}" loading="lazy"></figure>
+      <span class="pill ${st[0]}">${st[1]}</span><h3>${esc(p.en)}</h3><div class="names">${esc(p.pt)} · ${esc(p.la)}</div><p>${esc(p.text)}</p>
+      <div class="credit"><a href="${p.credit[1]}" target="_blank" rel="noopener">${esc(p.credit[0])}</a></div></article>`; }).join('')}</div></section>
+
+  <section id="ch1" class="chapter"><div class="num">Chapter I</div><h2>The Black Bass</h2>
+    <div class="chap-grid"><div>
+      <p class="dropcap" style="font-size:15px;margin-top:0">Black bass came to Portugal from America and found the deep, clear reservoirs to their liking. In Castelo do Bode they hunt crayfish along the rock and chase bogas into the side arms. Henshall's advice from 1903 still reads true.</p>
+      ${q('The natural food of both species is crawfish, which might be inferred from the character of their teeth and wide-opening mouth.')}
+      ${q('Except in cloudy weather the angler may rest during the noon hours, as the most favorable time is in the morning and late afternoon until dusk.')}
+      ${q('The middle of the day may be fished with a better prospect of success on cloudy, lowering days, with a brisk wind.')}
+      ${src(HEN, HENU)}
+    </div><figure><img src="plates/h-bass.jpg" alt="1896 painting of a large-mouthed black bass" loading="lazy"><figcaption class="credit"><a href="https://commons.wikimedia.org/wiki/File:Denton_Largemouth_Bass_1896.png" target="_blank" rel="noopener">Sherman F. Denton, 1896 · public domain</a></figcaption>
+      <div class="modern"><h4>On Castelo do Bode today</h4><ul><li>Match the crayfish: green pumpkin and brown jigs dragged down rocky points.</li><li>Dawn and dusk are prime. On bright middays go deep with a drop shot against the walls.</li><li>Cloud and wind change everything: spinnerbaits on the wind-blown banks.</li><li>Autumn: follow the baitfish into side arms like Fernandaires and the mouth at Bairradinha.</li><li>Season closed 16 March to 14 May. Minimum 20 cm.</li></ul></div></figure></div></section>
+
+  <section id="ch2" class="chapter"><div class="num">Chapter II</div><h2>The Carp</h2>
+    <div class="chap-grid"><figure><img src="plates/h-carp.jpg" alt="Victorian colour plate of a carp among reeds" loading="lazy"><figcaption class="credit"><a href="https://commons.wikimedia.org/wiki/File:British_fresh_water_fishes_(Plate-_Carp)_(8552033358).jpg" target="_blank" rel="noopener">A. F. Lydon, 1879 · public domain</a></figcaption></figure><div>
+      ${q('The Carp is the queen of rivers;')}
+      ${q('if you will fish for a Carp, you must put on a very large measure of patience, especially to fish for a river Carp:')}
+      ${q('in hot weather, for he will seldom bite in cold, you cannot be too early, or too late at it.')}
+      ${src(WAL, WALU)}
+      <div class="modern"><h4>On Castelo do Bode today</h4><ul><li>Walton was right about patience: the lake is full of natural food and the carp are rated very hard.</li><li>Prebait one spot for 2 to 4 days, then fish it from first light.</li><li>Use tiger nuts or hard boilies; crayfish strip anything soft.</li><li>Shallows that warm first, like Fernandaires and Aldeia do Mato, fish best from spring to autumn.</li><li>No night fishing here: hours run from 30 minutes before sunrise to 30 minutes after sunset.</li></ul></div></div></div></section>
+
+  <section id="ch3" class="chapter"><div class="num">Chapter III</div><h2>The Barbel</h2>
+    <div class="chap-grid"><div>
+      ${q('But the Barbel affords an angler choice sport, being a lusty and a cunning fish;')}
+      ${q('with this you may also bait the water a day or two before you fish for the Barbel, and be much the likelier to catch store;')}
+      ${q('And note, that none did ever over-bait the place, nor fish too early or too late for a Barbel.')}
+      ${src(WAL, WALU)}
+      <div class="modern"><h4>On Castelo do Bode today</h4><ul><li>The Iberian barbel takes the same baits as carp and turns up on carp rigs.</li><li>Season closed 16 March to 14 June. Minimum 20 cm.</li></ul></div>
+    </div><figure><img src="plates/h-barbel.jpg" alt="Victorian colour plate of gudgeon and barbel" loading="lazy"><figcaption class="credit"><a href="https://commons.wikimedia.org/wiki/File:British_fresh_water_fishes_(Plate-_Gudgeon_and_Barbel)_(8550932657).jpg" target="_blank" rel="noopener">A. F. Lydon, 1879 · public domain</a></figcaption></figure></div></section>
+
+  <section id="ch4" class="chapter"><div class="num">Chapter IV</div><h2>Weather, Light and the Moon</h2>
+    <div class="chap-grid"><div>
+      ${q('The best time for boat fishing on lakes or ponds is from near sundown until dark.')}
+      ${q('On streams the likely places are in deep and swift water, at the foot of rapids, or on a rocky lee shore with a brisk wind, where it congregates in search of minnows that are rendered almost helpless by the churning water.')}
+      ${src(HEN, HENU)}
+    </div><div class="modern"><h4>What the evidence says about the moon</h4><ul>
+      <li>A study of 361 trout trips over seven years found <a href="https://link.springer.com/article/10.1007/s42452-023-05379-8" target="_blank" rel="noopener">no link between moon phase and catch rate</a>.</li>
+      <li>Lake Fork data suggested bass over 7 lb were caught most around the full moon in spring, but only in water under about 18 °C (<a href="https://www.in-fisherman.com/editorial/lunar-phases-and-bass-fishing-results/154971" target="_blank" rel="noopener">In-Fisherman</a>).</li>
+      <li>So this app gives the moon only a small nudge, for big-fish baits in cool water. Light, season, wind and pressure matter far more.</li></ul></div></div>
+    <h3 style="font-family:var(--f-head);font-weight:400;font-size:20px;margin:22px 0 0">How the advice is worked out</h3>
+    <p style="max-width:68ch">Every lure earns points for the conditions you set. The spot's structure adds more, and the spot rating adds how active fish are at that hour. Green helps, red hurts. This is the black bass table as the app uses it.</p>
+    ${matrix}</section>
+
+  <section id="ch5" class="chapter"><div class="num">Chapter V</div><h2>The Lures and Baits</h2>
+    <div class="lures">${E.LURES.map(l => `<article class="lcard"><img src="${l.plate}" alt="${esc(l.name)}" loading="lazy"><div><h3>${esc(l.name)}</h3>${retrieveSVG(l.retrieve)}<p>${esc(l.how)}</p><p class="credit">${esc(l.rig)}</p>${l.ref ? `<a href="${l.ref.url}" target="_blank" rel="noopener" style="font-size:12.5px">${esc(l.ref.label)}</a>` : ''}</div></article>`).join('')}</div>
+    <p class="credit" style="margin-top:10px">Plates built from photos on Wikimedia Commons: サミー (public domain), Danndorfer1914 (CC0), Zabr13 (CC BY-SA 3.0), Bastet (CC BY-SA 4.0), Famartin (CC BY-SA 4.0), tiger nuts (CC BY-SA 3.0). Backgrounds removed and colour-matched to the page.</p></section>
+
+  <section id="ch6" class="chapter"><div class="num">Chapter VI</div><h2>Rules of the Water</h2>
+    <div class="chap-grid"><table class="rules"><tbody>
+      <tr><th>Licence</th><td>Inland recreational licence from ICNF, regional (Centro) or national.</td></tr>
+      <tr><th>Hours</th><td>30 min before sunrise to 30 min after sunset. No night fishing.</td></tr>
+      <tr><th>Black bass</th><td>Closed 16 March to 14 May. Minimum 20 cm.</td></tr>
+      <tr><th>Barbel and boga</th><td>Closed 16 March to 14 June. Barbel 20 cm, boga 15 cm.</td></tr>
+      <tr><th>Carp</th><td>Open all year, no minimum size.</td></tr>
+      <tr><th>Pike</th><td>Must not be returned alive.</td></tr>
+      <tr><th>Shad</th><td>Professional fishers only: release it.</td></tr>
+      <tr><th>Dam</th><td>No fishing within 150 m of the dam, intakes and outlets.</td></tr>
+      <tr><th>Live fish</th><td>Never as bait or groundbait.</td></tr></tbody></table>
+      <figure><img src="plates/h-pike.jpg" alt="Victorian colour plate of a pike" loading="lazy"><figcaption class="credit"><a href="https://commons.wikimedia.org/wiki/File:British_fresh_water_fishes_(Plate-_Pike)_(8550937089).jpg" target="_blank" rel="noopener">A. F. Lydon, 1879 · public domain</a> · Rules from <a href="https://informador.pt/legislacao/diploma/portaria-n-o-360-2017/" target="_blank" rel="noopener">Portaria 360/2017</a> and the reservoir plan; check signs at the water.</figcaption></figure></div></section>
+
+  <section class="chapter"><div class="num">Sources</div><h2 style="font-size:26px">Where this comes from</h2><ul class="sources">
+    <li>Satellite imagery: <a href="https://s2maps.eu" target="_blank" rel="noopener">Sentinel-2 cloudless 2024 by EOX IT Services</a>, CC BY-NC-SA 4.0; contains modified Copernicus Sentinel data 2024.</li>
+    <li>Weather: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0).</li>
+    <li>Old texts: <a href="${HENU}" target="_blank" rel="noopener">Henshall</a> and <a href="${WALU}" target="_blank" rel="noopener">Walton</a> via Project Gutenberg.</li>
+    <li>Spot names and access: Google Maps and local anglers on <a href="https://www.pesqueiro.pt/index.php?topic=23714.0" target="_blank" rel="noopener">pesqueiro.pt</a>.</li>
+    <li>Carp reputation: <a href="https://carpcircle.com/lake-directory-item.php?id=389" target="_blank" rel="noopener">Carp Circle directory</a>.</li>
+    <li>Lure technique: BassResource, Wired2Fish and Tackle Warehouse, linked on each lure.</li>
+    <li>Rules: <a href="https://informador.pt/legislacao/diploma/portaria-n-o-360-2017/" target="_blank" rel="noopener">Portaria 360/2017</a>, <a href="https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/69-2003-580990" target="_blank" rel="noopener">RCM 69/2003</a>.</li>
+    <li>The ratings are this app's own rules of thumb built from those sources, not a guarantee of fish.</li></ul></section>`;
+  $('#almanac').querySelectorAll('[data-jump]').forEach(a => a.onclick = e => { e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); });
+}
+
+
+
+// ---------- Views and updates ----------
+function setView(v) {
+  S.view = v;
+  document.querySelectorAll('.view').forEach(el => el.hidden = el.dataset.v !== v);
+  document.querySelectorAll('.tabs a').forEach(a => a.setAttribute('aria-current', a.dataset.view === v ? 'page' : 'false'));
+  if (v === 'map') setTimeout(() => { map.invalidateSize(); setSheet(sheetState); if (!fitted) { fitSpots(); fitted = true; } }, 0);
+  if (v === 'planner') renderPlanner();
+}
+function fromHash() { const h = (location.hash || '#map').slice(1); setView(['map', 'planner', 'almanac'].includes(h) ? h : 'map'); }
+window.addEventListener('hashchange', fromHash);
+function update() { const c = renderPills(); renderMap(c); renderSheet(c); if (S.view === 'planner') renderPlanner(); }
+let raf = null;
+function scheduleUpdate() { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }
+$('#pill-map').onclick = openConditions;
+window.addEventListener('resize', () => setSheet(sheetState));
+
+let fitted = false;
+renderAlmanac();
+update();
+setSheet('peek');
+fromHash();
+fetchWeather();
+if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+})();
+</script>
+</body>
+</html>
